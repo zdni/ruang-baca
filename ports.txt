@@ -1,0 +1,24 @@
+monolith:
+  server: 4901 | 27018
+
+microservices:
+  resusers: 4902 | 27019
+  documents: 4903 | 27020
+  orders: 4904 | 27021
+  orderpenalties: 4905 | 27022
+  master-data: 4906
+  redis: 6979
+
+
+order: {
+  id: 1
+  date: '23-10-2023'
+  document: {
+    id: 1
+    name: 'Buku Programming'
+  }
+  user: {
+    id: 1
+    name: 'Zidni'
+  }
+}

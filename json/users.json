@@ -1,0 +1,58 @@
+[
+  {
+    "_id": {"$oid":"641bcb76db02b3f7bb3772c0"},
+    "name":"Administrator",
+    "password":"$2b$10$I87crRHpPqWoi4JjPMgHoeqH1gacPa7KOeCWP3//7UvDgGcSBZnES",
+    "username":"admin",
+    "role":"admin",
+    "createdAt":1679543158,
+    "updatedAt":1679543237,
+    "__v":0
+  },
+  {
+    "_id": {"$oid":"641bcb7edb02b3f7bb3772c3"},
+    "classYear":"2018",
+    "idNumber":"E1E118001",
+    "name":"Mahasiswa IT 001",
+    "password":"$2b$10$l2CoU9SKpQ0i.9YSWQK2NOpyLysmsl8yqR5g8XnhNSJ7AThBu4j9e",
+    "username":"mahasiswa001",
+    "role":"student",
+    "createdAt":1679543166,
+    "updatedAt":1679543166,
+    "__v":0
+  },
+  {
+    "_id": {"$oid":"641bcb85db02b3f7bb3772c6"},
+    "classYear":"2018",
+    "idNumber":"E1E118002",
+    "name":"Mahasiswa IT 002",
+    "password":"$2b$10$iMGGhaqZhIOsRCRt.YAMeuwOeR9anJ8CqK1979W6nP.uPUPL1xUUC",
+    "username":"mahasiswa002",
+    "role":"student",
+    "createdAt":1679543173,
+    "updatedAt":1679543173,
+    "__v":0
+  },
+  {
+    "_id": {"$oid":"641bcb8bdb02b3f7bb3772c9"},
+    "idNumber":"20230101 2 30102 1 001",
+    "name":"Dosen IT 001",
+    "password":"$2b$10$4i/Y.nRQ8nBtxdyg3fNrn.7pWSrMm3uBvnLqH9OCQ6Ol6mDVFYVyK",
+    "username":"dosen001",
+    "role":"lecture",
+    "createdAt":1679543179,
+    "updatedAt":1679543179,
+    "__v":0
+  },
+  {
+    "_id": {"$oid":"641bcb93db02b3f7bb3772cc"},
+    "idNumber":"20230102 230103 1 002",
+    "name":"Dosen IT 002",
+    "password":"$2b$10$HW.eCWh8ONCMShFn6KgIYeiPLOEjqwG0L8IniT2YRKjGKK59GGpNW",
+    "username":"dosen002",
+    "role":"lecture",
+    "createdAt":1679543187,
+    "updatedAt":1679543187,
+    "__v":0
+  }
+]

@@ -1,0 +1,10 @@
+aggregate - $lookup
+
+# document
+groupby type
+groupby category
+groupby specialization
+sort by popular
+get available status
+
+# order

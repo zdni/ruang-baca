@@ -1,0 +1,66 @@
+[
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529d9a"},
+    "name":"Internet"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529d97"},
+    "name":"Aplikasi Perkantoran"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529d9d"},
+    "name":"Materi Kuliah"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529da1"},
+    "name":"Teknologi Informasi"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529d9e"},
+    "name":"Pemrograman"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529da4"},
+    "name":"Umum"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529d9b"},
+    "name":"Jaringan"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529da2"},
+    "name":"Tips & Trik"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529d9c"},
+    "name":"Kecerdasan Buatan"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529d99"},
+    "name":"Desain"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529da6"},
+    "name":"Website"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529d98"},
+    "name":"Basis Data"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529d9f"},
+    "name":"Perangkat Keras"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529da0"},
+    "name":"Sistem Operasi"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529da3"},
+    "name":"Toko Online"
+  },
+  {
+    "_id":{"$oid":"641bc2d65a4a66a8cf529da5"},
+    "name":"Utilitas"
+  }
+]

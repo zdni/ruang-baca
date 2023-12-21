@@ -1,0 +1,139 @@
+halaman landing page
+halaman login
+
+user:
+  profil
+  
+  level admin:
+    halaman beranda
+    halaman manajemen user
+    halaman manajemen peminatan
+    halaman manajemen dokumen
+    halaman peminjaman
+    halaman keterlambatan
+
+  level civitas:
+    halaman beranda
+    halaman peminjaman
+
+
+SERVICES:
+  Authentication
+  Document
+  Penalty
+  Return
+  Storage
+  Specialization
+  Transaction
+  User
+
+DATABASES:
+  Users
+  Documents
+  Penalties
+  Returns
+  Specializations
+  Storages
+  Transactions
+  
+
+Table
+  Database: Users
+    users:
+      id
+      IDNumber
+      name
+      username
+      password
+      status [lecturers, students]
+    
+    lecturers:
+      id
+      userId
+
+    students:
+      id
+      userId
+      classYear
+    
+  Database: Documents
+    documents:
+      id
+      code
+      title
+      writer
+      cover
+
+    theses:
+      id
+      documentId
+      studentIDNumber
+      graduationYear
+      lecturers: {
+        mentor: {
+          main
+          secondary
+        },
+        examiner: {
+          main
+          secondary
+          tersier
+        }
+      }
+      specializationId
+      file
+      storageId
+
+    books:
+      id
+      documentId
+      publisher
+      publicationYear
+      stock
+      categoryId
+
+    categories:
+      id
+      name
+
+  Database: Penalties
+    penalties:
+      id
+      transactionId
+      penalty
+      paymentDate
+      status
+
+  Database: Returns
+    returns:
+      id
+      transactionId
+      date
+      description
+  
+  Database: Specializations
+    specializations:
+      id
+      name
+  
+  Database: Storages
+    storages
+      id
+      name
+  
+  Database: Transactions
+    transactions:
+      id
+      userId
+      documentId
+      startDate
+      endDate
+      status {
+        0: pengajuan,
+        1: peminjaman,
+        2: dikembalikan,
+        3: terlambat,
+        4: terlambat dikembalikan,
+        5: sanksi sudah dibayar
+      }
+

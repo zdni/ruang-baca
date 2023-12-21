@@ -1,0 +1,118 @@
+/api/v1
+  /users
+    GET /
+    POST /
+    PATCH /:id
+    DELETE /:id
+
+  /documents
+    GET /
+    POST /
+    PATCH /:id
+    DELETE /:id
+
+  /penalties
+    GET /
+    POST /
+    PATCH /:id
+
+  /returns
+    GET /
+    POST /
+    PATCH /:id
+    DELETE /:id
+
+  /specializations
+    GET /
+    POST /
+    PATCH /:id
+    DELETE /:id
+
+  /storages
+    GET /
+    POST /
+    PATCH /:id
+    DELETE /:id
+
+  /transactions
+    GET /
+    POST /
+    PATCH /:id
+    DELETE /:id
+
+
+CODE    |   STATUS_CODE                   | KETERANGAN
+200     | OK                              |
+201     | CREATED                         |  # untuk POST, PUT, PATCH
+202     | ACCEPTED                        |
+203     | NONAUTHORITATIVE_INFORMATION    |  
+204     | NO_CONTENT                      |
+205     | RESET_CONTENT                   |
+206     | PARTIAL_CONTENT                 |
+
+400     | BAD_REQUEST                     |
+401     | UNAUTHORIZED                    |
+403     | FORBIDDEN                       |
+404     | NOT_FOUND                       |
+405     | METHOD_NOT_ALLOWED              |
+406     | NOT_ACCEPTABLE                  |
+408     | REQUEST_TIMEOUT                 |
+415     | UNSUPPORTED_MEDIA_TYPE          |
+429     | TOO_MANY_REQUESTS               |
+
+500     | INTERNAL_SERVER_ERROR           |
+501     | NOT_IMPLEMENTED                 |
+502     | BAD_GATEWAY                     |
+503     | SERVICE_UNAVAILABLE             |
+504     | GATEWAY_TIMEOUT                 |
+
+
+GET /
+  {
+    'code'    : CODE,
+    'status'  : STATUS_CODE,
+    'data'    : 
+      {
+        'field': 'value'
+      }
+  }
+
+POST /
+  {
+    'code'    : CODE,
+    'status'  : STATUS_CODE,
+    'data'    : 
+      [
+        {
+          'field': 'value'
+        }
+      ],
+    'page'    : 
+      {
+        'size'        : 10,
+        'total'       : 100,
+        'totalPages'  : 10,
+        'current'     : 2
+      }
+  }
+
+PATCH /:id
+
+
+DELETE /id
+  {
+
+  }
+
+
+ERROR
+{
+  'code'      : CODE,
+  'status'    : STATUS_CODE,
+  'errors'    : {
+    'field' : [
+      'error1',
+      'error2'
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"_id":{"$oid":"6515d4710dab964c966665ab"},"orderId":{"$oid":"6512f011ac1f9400b7879b2c"},"description":"Sanksi per hari sebesar Rp 2000","date":{"init":{"$date":"2023-10-01T19:30:34Z"},"done":{"$date":"2023-10-02T19:34:42Z"}},"status":"done","createdAt":1695929457,"updatedAt":1695929696,"__v":0}

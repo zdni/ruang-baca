@@ -1,0 +1,14 @@
+[
+  {
+    "_id":{"$oid":"641bc2e95a4a66a8cf52f005"},
+    "name":"Komputasi Cerdas dan Visualisasi"
+  },
+  {
+    "_id":{"$oid":"641bc2e95a4a66a8cf52f004"},
+    "name":"Komputasi Berbasis Jaringan"
+  },
+  {
+    "_id":{"$oid":"641bc2e95a4a66a8cf52f003"},
+    "name":"Rekayasa Perangkat Lunak"
+  }
+]
