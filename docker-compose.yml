@@ -1,0 +1,46 @@
+version: '3.7'
+
+services:
+  micrioservices-orderpenalty:
+    build:
+      context: ./micrioservices-orderpenalty
+      dockerfile: Dockerfile
+    image: micrioservices-orderpenalty
+    container_name: micrioservices-orderpenalty
+    command: /usr/src/app/node_modules/.bin/nodemon server.js
+    volumes:
+      - ./micrioservices-orderpenalty/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "4905:4905"
+    depends_on:
+      - mongorderpenalty
+    env_file: ./micrioservices-orderpenalty/.env
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: '0.15'
+          memory: 200M
+        reservations:
+          cpus: '0.05'
+          memory: 160M
+  mongorderpenalty:
+    image: mongo
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - "27022:27017"
+    networks:
+      - app-network
+
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+    data-volume:
+    node_modules:
+    web-root:
+      driver: local
