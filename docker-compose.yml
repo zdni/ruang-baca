@@ -1,0 +1,46 @@
+version: '3.7'
+
+services:
+  microservices-resuser:
+    build:
+      context: ./microservices-resuser
+      dockerfile: Dockerfile
+    image: microservices-resuser
+    container_name: microservices-resuser
+    command: /usr/src/app/node_modules/.bin/nodemon server.js
+    volumes:
+      - ./microservices-resuser/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "4902:4902"
+    depends_on:
+      - mongoresuser
+    env_file: ./microservices-resuser/.env
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: '0.15'
+          memory: 200M
+        reservations:
+          cpus: '0.05'
+          memory: 160M
+  mongoresuser:
+    image: mongo
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - "27019:27017"
+    networks:
+      - app-network
+
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+    data-volume:
+    node_modules:
+    web-root:
+      driver: local
