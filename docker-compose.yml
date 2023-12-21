@@ -1,0 +1,46 @@
+version: '3.7'
+
+services:
+  monolith-server:
+    build:
+      context: ./monolith-server
+      dockerfile: Dockerfile
+    image: monolith-server
+    container_name: monolith-server
+    command: /usr/src/app/node_modules/.bin/nodemon server.js
+    volumes:
+      - ./monolith-server/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "4901:4901"
+    depends_on:
+      - mongo
+    env_file: ./monolith-server/.env
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: '0.15'
+          memory: 200M
+        reservations:
+          cpus: '0.05'
+          memory: 160M
+  mongo:
+    image: mongo
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - "27018:27017"
+    networks:
+      - app-network
+
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+    data-volume:
+    node_modules:
+    web-root:
+      driver: local
