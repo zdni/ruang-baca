@@ -1,0 +1,21 @@
+{
+    "user": {
+        "id": "6508932427a5eee3c0ce0814",
+        "name": "Al Zidni Kasim",
+    },
+    "document": {
+        "id": "641bcaa25a4a66a8cf709e96",
+        "title": "Pengenalan Internet Burst Of Energy"
+    },
+    "date": {
+        "start": "2023-12-14T11:00:55Z",
+        "end": "2023-12-19T11:00:55Z"
+    },
+    "qty": 1,
+    "status": "process"
+}
+
+{
+    "status": "done",
+    "date.return": "2023-12-16T11:00:55.000Z"
+}

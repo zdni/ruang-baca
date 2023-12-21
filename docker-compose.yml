@@ -1,0 +1,46 @@
+version: '3.7'
+
+services:
+  microservices-order:
+    build:
+      context: ./microservices-order
+      dockerfile: Dockerfile
+    image: microservices-order
+    container_name: microservices-order
+    command: /usr/src/app/node_modules/.bin/nodemon server.js
+    volumes:
+      - ./microservices-order/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "4904:4904"
+    depends_on:
+      - mongoorder
+    env_file: ./microservices-order/.env
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: '0.15'
+          memory: 200M
+        reservations:
+          cpus: '0.05'
+          memory: 160M
+  mongoorder:
+    image: mongo
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - "27021:27017"
+    networks:
+      - app-network
+
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+    data-volume:
+    node_modules:
+    web-root:
+      driver: local
