@@ -1,0 +1,46 @@
+version: '3.7'
+
+services:
+  microservices-document:
+    build:
+      context: ./microservices-document
+      dockerfile: Dockerfile
+    image: microservices-document
+    container_name: microservices-document
+    command: /usr/src/app/node_modules/.bin/nodemon server.js
+    volumes:
+      - ./microservices-document/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "4903:4903"
+    depends_on:
+      - mongodocument
+    env_file: ./microservices-document/.env
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: '0.15'
+          memory: 200M
+        reservations:
+          cpus: '0.05'
+          memory: 160M
+  mongodocument:
+    image: mongo
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - "27020:27017"
+    networks:
+      - app-network
+
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+    data-volume:
+    node_modules:
+    web-root:
+      driver: local
