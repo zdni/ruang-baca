@@ -21,8 +21,8 @@ class ResUserService {
       if(!username) { return { status: false, code: 428, message: "USERNAME_IS_REQUIRED" } }
       const password = username
 
-      const isUsernameExist = await usernameExist(username)
-      if(isUsernameExist) { return { status: false, code: 409, message: "USERNAME_EXIST" } }
+      // const isUsernameExist = await usernameExist(username)
+      // if(isUsernameExist) { return { status: false, code: 409, message: "USERNAME_EXIST" } }
 
       let salt = await bcrypt.genSalt(10)
       let hash = await bcrypt.hash(password, salt)

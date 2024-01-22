@@ -1,3 +1,4 @@
+import Document from '../models/Document.js'
 import Order from '../models/Order.js'
 
 import checkValidationObjectId from "../libraries/checkValidationObjectId.js"
@@ -86,15 +87,25 @@ class OrderController {
       const {id} = req.params
       if(!id) { throw { code: 428, message: "ID_REQUIRED", data: null, status: false } }
       
-      const checkObjId = await checkValidationObjectId(id, Order, "ORDER")
+      const checkObjId = await checkValidationObjectId(id, Order, "ORDER", true)
       if(!checkObjId.status) return checkObjId
 
       const order = await Order.findByIdAndUpdate( { _id: id }, req.body, { new: true } )
       if(!order) { throw { code: 500, message: "ORDER_UPDATE_FAILED", data: null, status: false } }
 
-      // function update current qty document if status has done
-
-      // end function
+      // update qty document for changing order status
+      let qty
+      if(["late", "done"].includes(req.body.$set.status)) {
+        qty = checkObjId.data.qty
+      }
+      if(checkObjId.data.status === 'draft' && req.body.status === 'process') {
+        qty = checkObjId.data.qty*-1
+      }
+      if(checkObjId.data.status === 'process' && req.body.status === 'cancel') {
+        qty = checkObjId.data.qty
+      }
+      
+      await Document.findByIdAndUpdate( { _id: checkObjId.data.documentId }, { $inc: { 'currentQty': qty } } )
 
       return res.status(200).json({
         status: true,
