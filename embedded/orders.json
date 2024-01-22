@@ -1,0 +1,21 @@
+{
+    "_id":{"$oid":"6512f011ac1f9400b7879b2c"},
+    "user":{
+      "id":{"$oid":"6508932427a5eee3c0ce0814"},
+      "name":"Al Zidni Kasim"
+    },
+    "document":{
+      "id":{"$oid":"641bcaa25a4a66a8cf709e96"},
+      "title": "Pengenalan Internet Burst Of Energy"
+    },
+    "date":{
+      "start":{"$date":"2023-09-26T14:52:00.156Z"},
+      "end":{"$date":"2023-10-01T14:52:01.57Z"}
+    },
+    "status":"process",
+    "qty":1,
+    "createdAt":1695739921,
+    "updatedAt":1695929441,
+    "__v":0
+  }
+  

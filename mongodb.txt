@@ -8,3 +8,38 @@ sort by popular
 get available status
 
 # order
+documentcategories
+documents
+documenttypes
+orderpenalties
+orders
+resspecializations
+resusers
+stocklocations
+
+INSERT INTO document_categories (name) VALUE ("Internet");
+INSERT INTO document_categories (name) VALUE ("Aplikasi Perkantoran");
+INSERT INTO document_categories (name) VALUE ("Materi Kuliah");
+INSERT INTO document_categories (name) VALUE ("Teknologi Informasi");
+INSERT INTO document_categories (name) VALUE ("Pemrograman");
+INSERT INTO document_categories (name) VALUE ("Umum");
+INSERT INTO document_categories (name) VALUE ("Jaringan");
+INSERT INTO document_categories (name) VALUE ("Tips & Trik");
+INSERT INTO document_categories (name) VALUE ("Kecerdasan Buatan");
+INSERT INTO document_categories (name) VALUE ("Desain");
+INSERT INTO document_categories (name) VALUE ("Website");
+INSERT INTO document_categories (name) VALUE ("Basis Data");
+INSERT INTO document_categories (name) VALUE ("Perangkat Keras");
+INSERT INTO document_categories (name) VALUE ("Sistem Operasi");
+INSERT INTO document_categories (name) VALUE ("Toko Online");
+INSERT INTO document_categories (name) VALUE ("Utilitas");
+
+INSERT INTO document_types (name) VALUE ("Buku");
+INSERT INTO document_types (name) VALUE ("Tugas Akhir");
+INSERT INTO document_types (name) VALUE ("Laporan KP");
+
+INSERT INTO res_specializations (name) VALUE ("Komputasi Cerdas dan Visualisasi");
+INSERT INTO res_specializations (name) VALUE ("Komputasi Berbasis Jaringan");
+INSERT INTO res_specializations (name) VALUE ("Rekayasa Perangkat Lunak");
+
+INSERT INTO stock_locations (name) VALUE ("Perpustakaan Jurusan Teknik Informatika UHO");

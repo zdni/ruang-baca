@@ -22,3 +22,17 @@ order: {
     name: 'Zidni'
   }
 }
+
+docker-compose build
+docker-compose up -d
+
+./jmeter.sh -n -t /home/sedeni/4U/Testing/Ruang\ Baca\ \(Monolith\).jmx -l /home/sedeni/4U/Testing/Ruang\ Baca\ 25\ User\ \(Monolith\).csv -e -o /home/sedeni/4U/Testing/Ruang\ Baca\ 25\ User\ \(Monolith\)
+./jmeter.sh -n -t /home/sedeni/4U/Testing/Ruang\ Baca\ \(Monolith\).jmx -l /home/sedeni/4U/Testing/Ruang\ Baca\ 50\ User\ \(Monolith\).csv -e -o /home/sedeni/4U/Testing/Ruang\ Baca\ 50\ User\ \(Monolith\)
+./jmeter.sh -n -t /home/sedeni/4U/Testing/Ruang\ Baca\ \(Monolith\).jmx -l /home/sedeni/4U/Testing/Ruang\ Baca\ 75\ User\ \(Monolith\).csv -e -o /home/sedeni/4U/Testing/Ruang\ Baca\ 75\ User\ \(Monolith\)
+./jmeter.sh -n -t /home/sedeni/4U/Testing/Ruang\ Baca\ \(Monolith\).jmx -l /home/sedeni/4U/Testing/Ruang\ Baca\ 100\ User\ \(Monolith\).csv -e -o /home/sedeni/4U/Testing/Ruang\ Baca\ 100\ User\ \(Monolith\)
+
+
+./jmeter.sh -n -t /home/sedeni/4U/Testing/Ruang\ Baca\ \(Microservices\).jmx -l /home/sedeni/4U/Testing/Ruang\ Baca\ 25\ User\ \(Microservices\).csv -e -o /home/sedeni/4U/Testing/Ruang\ Baca\ 25\ User\ \(Microservices\)
+./jmeter.sh -n -t /home/sedeni/4U/Testing/Ruang\ Baca\ \(Microservices\).jmx -l /home/sedeni/4U/Testing/Ruang\ Baca\ 50\ User\ \(Microservices\).csv -e -o /home/sedeni/4U/Testing/Ruang\ Baca\ 50\ User\ \(Microservices\)
+./jmeter.sh -n -t /home/sedeni/4U/Testing/Ruang\ Baca\ \(Microservices\).jmx -l /home/sedeni/4U/Testing/Ruang\ Baca\ 75\ User\ \(Microservices\).csv -e -o /home/sedeni/4U/Testing/Ruang\ Baca\ 75\ User\ \(Microservices\)
+./jmeter.sh -n -t /home/sedeni/4U/Testing/Ruang\ Baca\ \(Microservices\).jmx -l /home/sedeni/4U/Testing/Ruang\ Baca\ 100\ User\ \(Microservices\).csv -e -o /home/sedeni/4U/Testing/Ruang\ Baca\ 100\ User\ \(Microservices\)
