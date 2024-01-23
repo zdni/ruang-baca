@@ -106,7 +106,7 @@ class DocumentController {
           }
         },
         { $unwind: {"path": '$locationId', "preserveNullAndEmptyArrays": true} },
-        { $addFields: {coverUrl: { $concat: [req.protocol, "://", req.get('host'), "/uploads/documents/", "$cover"] }} },
+        { $addFields: {coverUrl: { $concat: ["http://139.59.108.29:4901/uploads/documents/", "$cover"] }} },
       ])
       
       if(!document || !(document.length > 0)) { throw { code: 404, message: "DOCUMENT_NOT_FOUND", data: null, status: false } }

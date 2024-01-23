@@ -9,7 +9,7 @@ const connection = () => {
   mongoose.set("strictQuery", false);
   mongoose.connect(`${MONGODB_URL}`, {
     dbName: `${env.MONGODB_DB_NAME}`,
-    directConnection: true
+    // directConnection: true
   })
 
   const connection = mongoose.connection
